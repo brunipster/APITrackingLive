@@ -23,7 +23,7 @@ class App {
 
     private routes(controllers: { forEach: (arg0: (controller: iController) => void) => void; }) {
         controllers.forEach(controller => {
-            this.app.use(`/api${controller.path}`, controller.router)
+            this.app.use(`/api${controller.path}`, controller.initRoutes())
         })
     }
 

@@ -1,6 +1,13 @@
+import { RequestHandler, Router } from "express";
+import iService from "./service.interface";
+
 interface iController {
-    path: string;
     router: any;
-    initRoutes(): void;
+    path: String;
+    initRoutes(): Router;
+    create: RequestHandler;
+    delete: RequestHandler;
+    getAll: RequestHandler;
+    update: RequestHandler;
 }
 export default iController

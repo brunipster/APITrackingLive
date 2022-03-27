@@ -1,19 +1,22 @@
 {
     "compilerOptions": {
-        "sourceMap": true,
         "target": "es6",
         "module": "commonjs",
         "outDir": "./dist",
         "baseUrl": "./src",
         "paths": {
             "@schemas/*": ["schemas/*"],
+            "@services/*": ["services/*"],
+            "@models/*": ["models/*"],
             "@utils/*": ["utils/*"],
-            "@interfaces/*": ["interfaces/*"]
+            "@interfaces/*": ["interfaces/*"],
+            "@repositories/*": ["repositories/*"],
+            "@helpers/*": ["helpers/*"]
         }
     },
     "include": [
         "src/**/*.ts"
-    ],
+, "src/views/index.jsx"    ],
     "exclude": [
         "node_modules",
         ".vscode"

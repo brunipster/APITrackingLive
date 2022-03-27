@@ -9,16 +9,16 @@ import '@utils/DBconnection';
 import loggerMiddleware from './middleware/logger'
 import * as bodyParser from 'body-parser'
 
-import MovementController from './controllers/movement.controller'
-import VehicleLogController from './controllers/vehiclelog.controller'
-import VehicleMaintenanceController from './controllers/vehiclemaintenance.controller'
+import AccountInstance from './controllers/account.controller'
+import UserInstance from './controllers/user.controller'
+import MovementInstance from './controllers/movement.controller'
 
 const app = new App({
     port: 5000,
     controllers: [
-        new MovementController(),
-        new VehicleLogController(),
-        new VehicleMaintenanceController()
+        AccountInstance,
+        UserInstance,
+        MovementInstance
     ],
     middleWares: [
         bodyParser.json(),
